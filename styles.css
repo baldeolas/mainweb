@@ -1,0 +1,240 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #141212;
+    color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 60px; /* Make space for the footer */
+    padding: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+body.dark-mode h1 {
+    color: #e9e0e0;
+}
+
+.subtext {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+body.dark-mode .subtext {
+    color: #ffffff;
+}
+
+.cta-btn {
+    padding: 0.75rem 1.5rem;
+    background: #032a64;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 0.5rem;
+}
+
+.cta-btn:hover {
+    background: #141618;
+}
+
+/* Movable and Resizable Window Styles */
+.draggable {
+    position: absolute;
+    width: 300px; /* Fixed width for horizontal resizing */
+    height: 200px;
+    border: 1px solid #000000;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    cursor: move;
+    z-index: 1000; /* Ensures window is on top */
+    opacity: 0;
+    transform: scale(0.8);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.draggable.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+body.dark-mode .draggable {
+    border-color: #252227;
+    background-color: #110e0e;
+}
+
+.draggable .header {
+    background-color: #252227;
+    color: #fff;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #756d6d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: move;
+}
+
+body.dark-mode .draggable .header {
+    background-color: #dbd2d2;
+    color: #2c1f1f;
+}
+
+.draggable .content {
+    padding: 1rem;
+    overflow: auto;
+    height: calc(100% - 30px); /* Adjust for header height */
+}
+
+.close-btn {
+    background: #524f48;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.close-btn:hover {
+    background: #2c1f1f;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #0e0c0c;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 1s ease;
+    z-index: 1000;
+}
+
+.theme-toggle-btn:hover {
+    background-color: #909294;
+}
+
+/* Footer Styles */
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    background-color: transparent; /* Background color removed */
+    transition: background-color 1.3s ease;
+}
+
+body.dark-mode .footer {
+    color: #f4f4f4;
+    box-shadow: 0 -2px 5px rgba(187, 187, 187, 0.5);
+    background-color: rgba(0, 0, 0, 0.2); /* Adjusted for dark mode */
+    
+}
+
+body:not(.dark-mode) .footer {
+    color: #333;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Adjusted for light mode */
+}
+
+.social-media {
+    margin-bottom: 5px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtext {
+        font-size: 0.875rem;
+    }
+
+    .cta-btn {
+        padding: 0.5rem 1rem;
+    }
+
+    .draggable {
+        width: 100%;
+        max-width: 90%;
+        height: 150px;
+    }
+}
