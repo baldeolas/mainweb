@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
     position: relative;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -33,16 +33,16 @@ body.dark-mode {
 
 h1 {
     font-size: 2rem;
-    color: #333;
+    color: #000000;
 }
 
 body.dark-mode h1 {
-    color: #e9e0e0;
+    color: #ffffff;
 }
 
 .subtext {
     font-size: 1rem;
-    color: #666;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
@@ -237,4 +237,12 @@ body:not(.dark-mode) .footer {
         max-width: 90%;
         height: 150px;
     }
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: blur(2px);
 }
