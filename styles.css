@@ -17,7 +17,7 @@ body {
     align-items: center;
     background-color: #f0f0f0;
     position: relative;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 1s, color 0.3s;
 }
 
 body.dark-mode {
@@ -62,23 +62,24 @@ body.dark-mode .subtext {
 }
 
 .cta-btn:hover {
-    background: #141618;
+    background: #4a4e52;
 }
 
 /* Movable and Resizable Window Styles */
 .draggable {
     position: absolute;
     width: 300px; /* Fixed width for horizontal resizing */
-    height: 200px;
+    height: 289px;
     border: 1px solid #000000;
     background-color: #fcfcfc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-    cursor: move;
+    border-radius: 5px;
+    cursor: pointer;
     z-index: 1000; /* Ensures window is on top */
     opacity: 0;
     transform: scale(0.8);
     transition: transform 0.3s ease, opacity 0.3s ease;
+    
 }
 
 .draggable.show {
@@ -89,6 +90,7 @@ body.dark-mode .subtext {
 body.dark-mode .draggable {
     border-color: #252227;
     background-color: #110e0e;
+    transition: ease .3s;
 }
 
 .draggable .header {
@@ -106,14 +108,17 @@ body.dark-mode .draggable {
 }
 
 body.dark-mode .draggable .header {
-    background-color: #dbd2d2;
+    background-color: #a5a5a5;
     color: #2c1f1f;
 }
 
 .draggable .content {
+   
+    
     padding: 1rem;
     overflow: auto;
-    height: calc(100% - 30px); /* Adjust for header height */
+    /* height: calc(100% - 100px); */
+   
 }
 
 .close-btn {
@@ -148,7 +153,7 @@ body.dark-mode .draggable .header {
     position: fixed;
     top: 10px;
     left: 10px;
-    background-color: #0e0c0c;
+    background-color: transparent;
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -157,18 +162,20 @@ body.dark-mode .draggable .header {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor:pointer;
     font-size: 18px;
-    transition: background 1s ease;
+    transition: background .3s ease;
+    transition: .3s ease;
     z-index: 1000;
 }
 
 .theme-toggle-btn:hover {
-    background-color: #909294;
+    background-color: transparent;
+    transform: scale(1.2);
 }
 
 /* Footer Styles */
-.footer {
+.footer , boton{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -182,7 +189,7 @@ body.dark-mode .draggable .header {
 }
 
 body.dark-mode .footer {
-    color: #f4f4f4;
+    color: #a39b9b;
     box-shadow: 0 -2px 5px rgba(187, 187, 187, 0.5);
     background-color: rgba(0, 0, 0, 0.2); /* Adjusted for dark mode */
     
@@ -208,13 +215,19 @@ body:not(.dark-mode) .footer {
     height: 24px;
 }
 
+.social-icon:hover {
+    cursor: pointer;
+}
+
 .footer a {
     color: inherit;
     text-decoration: none;
+    transition: ease .2s;
 }
 
 .footer a:hover {
     text-decoration: underline;
+    transform: scale(1.259);
     
 }
 
@@ -244,5 +257,27 @@ body:not(.dark-mode) .footer {
     right: 0;
     bottom: 0;
     z-index: -1;
-    filter: blur(2px);
+}
+
+.subtext, .subtexth1{
+    user-select: none;
+}
+
+.copy{
+    color: black;
+   font-size: 11px;
+}
+
+.boton{
+    color: black;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+ size: 1px;
+    text-align: center;
+}
+
+.draggable-window1 {
+    width: 300px;
+    height: 300px;
 }
