@@ -108,4 +108,21 @@ document.querySelectorAll('.draggable').forEach(dragItem => {
         isHorizontalResizing = false;
         currentlyDragging = null; // Reset currentlyDragging
     });
+  
 });
+
+function togglePlayPause() {
+    var audio = document.getElementById('bgm');
+    var button = document.getElementById('playPauseButton');
+
+    if (audio.paused) {
+      audio.play();
+      button.textContent = 'Pause';
+    } else {
+      audio.pause();
+      button.textContent = 'Play';
+    }
+  }
+
+ 
+  
