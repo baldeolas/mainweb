@@ -10,12 +10,17 @@
 </head>
 <body>
 
+    <audio id="bgm" autoplay loop >
+        <source src="lofi.mp3" type="audio/mp3">
+    </audio>
+
     <video autoplay loop muted class="back-video">
         <source src="video.mp4" type="video/mp4">
     </video>
+    
     <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
     <div class="container">
-        <h1>hi! i'm iolas</h1>
+        <h1 class="subtexth1">hi! i'm iolas</h1>
         <p class="subtext">strategist | illustrator | web developer | bini_colet | click totoro</p>
         <button id="open-btn" class="cta-btn">Open Window 1</button>
         <button id="open-btn2" class="cta-btn">Open Window 2</button>
@@ -24,9 +29,11 @@
         <div id="draggable-window1" class="draggable hidden">
             <div class="header">
                 Window 1
-                <button class="close-btn" data-target="#draggable-window1">X</button>
+                <button class="close-btn" data-target="#draggable-window1">X
+                </button>
             </div>
-            <div class="content">This is Window 1.</div>
+            <div class="content">Coming Soon!</div>
+            <img src="colet.png" alt="">
            
         </div>
         <div id="draggable-window2" class="draggable hidden">
@@ -34,7 +41,7 @@
                 Window 2
                 <button class="close-btn" data-target="#draggable-window2">X</button>
             </div>
-            <div class="content">This is Window 2.</div>
+            <div class="content">Coming Soon!</div>
         
         </div>
         <div id="draggable-window3" class="draggable hidden">
@@ -42,7 +49,7 @@
                 Window 3
                 <button class="close-btn" data-target="#draggable-window3">X</button>
             </div>
-            <div class="content">This is Window 3.</div>
+            <div class="content">Coming Soon!</div>
           
         </div>
         <div id="draggable-window4" class="draggable hidden">
@@ -50,7 +57,7 @@
                 Window 4
                 <button class="close-btn" data-target="#draggable-window4">X</button>
             </div>
-            <div class="content">This is Window 4.</div>
+            <div class="content">Coming Soon!</div>
            
         </div>
     </div>
@@ -65,11 +72,13 @@
             <a href="https://instagram.com/baldeolas" target="_blank" class="social-icon" aria-label="Instagram">
                 <img src="instagram.png" alt="Instagram">
             </a>
-            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" class="social-icon" aria-label="Totoro">
+            <a onclick="togglePlayPause()" target="_blank" class="social-icon" aria-label="Totoro"
+            >
                 <img src="totoro.png" alt="totoro">
             </a>
+        
         </div>
-        <p>&copy; 2024 baldeolas</p>
+        <p class="copy">&copy; 2024 baldeolas</p>
     </footer>
     <script src="script.js"></script>
 </body>
