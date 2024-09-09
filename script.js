@@ -1,3 +1,5 @@
+/* dun ka na tanginaka */
+
 // window draggable, resizable, visibility , theme
 const windows = {
     1: document.getElementById('draggable-window1'),
