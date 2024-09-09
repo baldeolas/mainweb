@@ -1,4 +1,4 @@
-/* dun ka na tanginaka */
+
 
 // window draggable, resizable, visibility , theme
 const windows = {
@@ -126,7 +126,7 @@ function togglePlayPause() {
     }
   }
 
-// masaya ka na? tanginaka talaga. wag ka na babalik
+// masaya ka na?
 
  
   
