@@ -1,4 +1,4 @@
-/* Reset some default styles */
+/* bat binabasa mo to?? tanginamo ah */
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +27,7 @@ body.dark-mode {
 
 .container {
     text-align: center;
-    margin-bottom: 60px; /* Make space for the footer */
+    margin-bottom: 60px; 
     padding: 10px;
 }
 
@@ -65,17 +65,17 @@ body.dark-mode .subtext {
     background: #4a4e52;
 }
 
-/* Movable and Resizable Window Styles */
+/* window styles */
 .draggable {
     position: absolute;
-    width: 300px; /* Fixed width for horizontal resizing */
+    width: 300px;
     height: 289px;
     border: 1px solid #000000;
     background-color: #fcfcfc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     cursor: pointer;
-    z-index: 1000; /* Ensures window is on top */
+    z-index: 1000;
     opacity: 0;
     transform: scale(0.8);
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -148,7 +148,7 @@ body.dark-mode .draggable .header {
 }
 
 
-/* Theme Toggle Button */
+/* theme toggle */
 .theme-toggle-btn {
     position: fixed;
     top: 10px;
@@ -174,8 +174,8 @@ body.dark-mode .draggable .header {
     transform: scale(1.2);
 }
 
-/* Footer Styles */
-.footer , boton{
+/* footer */
+.footer , .boton{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -183,7 +183,7 @@ body.dark-mode .draggable .header {
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
-    background-color: transparent; /* Background color removed */
+    background-color: transparent; 
     transition: background-color 1.3s ease;
 }
 
@@ -230,7 +230,7 @@ body:not(.dark-mode) .footer {
     
 }
 
-/* Responsive Styles */
+/* media querizz */
 @media (max-width: 600px) {
     h1 {
         font-size: 1.5rem;
