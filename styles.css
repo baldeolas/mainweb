@@ -189,14 +189,12 @@ body.dark-mode .draggable .header {
 
 body.dark-mode .footer {
     color: #a39b9b;
-    box-shadow: 0 -2px 5px rgba(187, 187, 187, 0.5);
     background-color:transparent; 
     
 }
 
 body:not(.dark-mode) .footer {
     color: #333;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
      background-color: transparent;
 }
 
