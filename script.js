@@ -1,4 +1,4 @@
-// JavaScript for making the window draggable, resizable, toggle visibility, and theme
+// window draggable, resizable, visibility , theme
 const windows = {
     1: document.getElementById('draggable-window1'),
     2: document.getElementById('draggable-window2'),
@@ -23,25 +23,25 @@ let initialMousePos = [0, 0];
 let isResizing = false;
 let startX, startY, startWidth, startHeight;
 let isHorizontalResizing = false;
-let currentlyDragging = null; // Track the currently dragged window
-let highestZIndex = 1000; // Initialize highest z-index
+let currentlyDragging = null;
+let highestZIndex = 1000; 
 
-// Function to open a window
+// open window
 const openWindow = (key) => {
     const windowToShow = windows[key];
     windowToShow.classList.remove('hidden');
     windowToShow.classList.add('show');
-    windowToShow.style.left = `${30 + (key - 1) * 60}px`; // Adjust initial horizontal position
-    windowToShow.style.top = `${30 + (key - 1) * 60}px`;  // Adjust initial vertical position
+    windowToShow.style.left = `${30 + (key - 1) * 60}px`; // horizontal
+    windowToShow.style.top = `${30 + (key - 1) * 60}px`;  // vertical
     windowToShow.style.zIndex = 1000 + key; // Ensure proper stacking
 };
 
-// Set up event listeners for open buttons
+//open button
 Object.keys(buttons).forEach(key => {
     buttons[key].addEventListener('click', () => openWindow(key));
 });
 
-// Set up event listeners for close buttons
+//close button
 document.querySelectorAll('.close-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         const targetId = btn.getAttribute('data-target');
@@ -53,14 +53,14 @@ document.querySelectorAll('.close-btn').forEach(btn => {
     });
 });
 
-// Toggle between dark and light mode
+// darkmode toggle
 themeToggleBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     const isDarkMode = document.body.classList.contains('dark-mode');
     themeToggleBtn.textContent = isDarkMode ? '☀️' : '🌙';
 });
 
-// Make windows draggable and resizable
+//windows draggable, resizable
 document.querySelectorAll('.draggable').forEach(dragItem => {
     dragItem.addEventListener('mousedown', (e) => {
         if (e.target.classList.contains('resizer')) {
@@ -84,7 +84,7 @@ document.querySelectorAll('.draggable').forEach(dragItem => {
             dragItem.offsetLeft - initialMousePos[0],
             dragItem.offsetTop - initialMousePos[1]
         ];
-        // Bring the dragged window to the front
+        //dragged window to front
         currentlyDragging.style.zIndex = ++highestZIndex;
     });
 
