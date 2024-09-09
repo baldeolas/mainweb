@@ -35,7 +35,7 @@ const openWindow = (key) => {
     windowToShow.classList.add('show');
     windowToShow.style.left = `${30 + (key - 1) * 60}px`; // horizontal
     windowToShow.style.top = `${30 + (key - 1) * 60}px`;  // vertical
-    windowToShow.style.zIndex = 1000 + key; // Ensure proper stacking
+    windowToShow.style.zIndex = 1000 + key;
 };
 
 //open button
@@ -51,7 +51,7 @@ document.querySelectorAll('.close-btn').forEach(btn => {
         windowToHide.classList.remove('show');
         setTimeout(() => {
             windowToHide.classList.add('hidden');
-        }, 300); // delay to match CSS animation duration
+        }, 300);
     });
 });
 
@@ -108,7 +108,7 @@ document.querySelectorAll('.draggable').forEach(dragItem => {
         active = false;
         isResizing = false;
         isHorizontalResizing = false;
-        currentlyDragging = null; // Reset currentlyDragging
+        currentlyDragging = null;
     });
   
 });
@@ -125,6 +125,8 @@ function togglePlayPause() {
       button.textContent = 'Play';
     }
   }
+
+// masaya ka na? tanginaka talaga. wag ka na babalik
 
  
   
